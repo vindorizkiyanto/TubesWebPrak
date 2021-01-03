@@ -1,3 +1,6 @@
+<?= $this->extend('layout/template_auth'); ?>
+
+<?= $this->section('content_auth'); ?>
 <form class="box" action="" method="post">
   <h1>Register</h1>
   <input type="text" name="" placeholder="Email">
@@ -7,3 +10,4 @@
   <input type="submit" name="" value="Create Account">
   <span class="dark-color d-inline-block line-height-2">Sudah Punya Account? <a href="/auth/login">Login</a></span>
 </form>
+<?= $this->endSection(); ?>
