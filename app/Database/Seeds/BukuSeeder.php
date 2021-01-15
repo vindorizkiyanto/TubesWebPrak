@@ -18,6 +18,7 @@ class BukuSeeder extends \CodeIgniter\Database\Seeder
                 Jangan pernah bermimpi meraih sukses jika Anda tidak memiliki personal branding yang kuat dan positif!
                 Burung yang sama hinggap di dahan yang sama.
                 Apa pun pilihan hidup dan karir Anda, jadilah yang terbaik!',
+                'stok   '     => '2',
                 'created_at'  => Time::now(),
                 'updated_at'  => Time::now()
             ],
@@ -27,6 +28,7 @@ class BukuSeeder extends \CodeIgniter\Database\Seeder
                 'penulis'     => 'Ahmad Harjani',
                 'sampul'      => 'https://ecs7.tokopedia.net/img/cache/900/VqbcmM/2020/12/24/82c75fa3-2397-43b9-9e51-2976c6fe2bc5.jpg',
                 'deskripsi'   => 'Serial kali ini membahas tentang kesalahan umum dalam Salat, Wudhu, dan Berhadas',
+                'stok   '     => '3',
                 'created_at'  => Time::now(),
                 'updated_at'  => Time::now()
             ],
@@ -39,6 +41,7 @@ class BukuSeeder extends \CodeIgniter\Database\Seeder
                 rumus-rumus dan formulanya? Tenang, kamu perlu
                 membaca buku ini supaya bisa membuktikan kalau Microsoft Excel itu
                 memang mudah.',
+                'stok   '     => '1',
                 'created_at'  => Time::now(),
                 'updated_at'  => Time::now()
             ],
@@ -50,6 +53,7 @@ class BukuSeeder extends \CodeIgniter\Database\Seeder
                 'deskripsi'   => 'Dalam hidup ini, kita hanya punya
                 kepedulian dalam jumlah yang terbatas.
                 Makanya, Anda harus bijaksana dalam menentukan kepedulian Anda.',
+                'stok   '     => '5',
                 'created_at'  => Time::now(),
                 'updated_at'  => Time::now()
             ],

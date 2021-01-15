@@ -48,6 +48,16 @@ class UserSeeder extends \CodeIgniter\Database\Seeder
                 'notelepon'   => '231',
                 'created_at'  => Time::now(),
                 'updated_at'  => Time::now()
+            ],
+            [
+                'username'    => 'orang',
+                'email'       => 'orang@bukuku.com',
+                'password'    => 'bukanadmin',
+                'level'       => 'user',
+                'nama'        => 'Orang',
+                'notelepon'   => '3333',
+                'created_at'  => Time::now(),
+                'updated_at'  => Time::now()
             ]
         ];
 

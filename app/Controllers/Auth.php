@@ -18,10 +18,12 @@ class Auth extends BaseController
 			'title' => 'Buku Ku | Login'
 		];
 
-		if (session()->get('logged_in')) {
+		if (session()->get('logged_in') && (session()->get('level') == "admin")) {
+			return redirect()->to('/admin');
+		} else if (session()->get('logged_in') && (session()->get('level') == "user")) {
 			return redirect()->to('/');
 		} else {
-			return view('auth/login', $data);;
+			return view('auth/login', $data);
 		}
 	}
 
@@ -34,17 +36,31 @@ class Auth extends BaseController
 		if ($user) {
 			$password = $user['password'];
 			if ($inputPassword == $password) {
-				$dataSession = [
-					'id' => $user['id'],
-					'username' => $user['username'],
-					'email' => $user['email'],
-					'nama' => $user['nama'],
-					'notelepon' => $user['notelepon'],
-					'level' => $user['level'],
-					'logged_in' => TRUE
-				];
-				session()->set($dataSession);
-				return redirect()->to('/');
+				if ($user['level'] == "admin") {
+					$dataSession = [
+						'id' => $user['id'],
+						'username' => $user['username'],
+						'email' => $user['email'],
+						'nama' => $user['nama'],
+						'notelepon' => $user['notelepon'],
+						'level' => "admin",
+						'logged_in' => TRUE
+					];
+					session()->set($dataSession);
+					return redirect()->to('/admin');
+				} else if ($user['level'] == "user") {
+					$dataSession = [
+						'id' => $user['id'],
+						'username' => $user['username'],
+						'email' => $user['email'],
+						'nama' => $user['nama'],
+						'notelepon' => $user['notelepon'],
+						'level' => "user",
+						'logged_in' => TRUE
+					];
+					session()->set($dataSession);
+					return redirect()->to('/');
+				}
 			} else {
 				session()->setFlashdata('pesan', 'Password salah.');
 				return redirect()->to('/login');
@@ -61,7 +77,9 @@ class Auth extends BaseController
 			'title' => 'Buku Ku | Register'
 		];
 
-		if (session()->get('logged_in')) {
+		if (session()->get('logged_in') && (session()->get('level') == "admin")) {
+			return redirect()->to('/admin');
+		} else if (session()->get('logged_in') && (session()->get('level') == "user")) {
 			return redirect()->to('/');
 		} else {
 			return view('auth/register', $data);

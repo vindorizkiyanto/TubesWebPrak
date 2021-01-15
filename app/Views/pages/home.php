@@ -1,6 +1,8 @@
 <?= $this->extend('layout/template_main'); ?>
 
 <?= $this->section('content'); ?>
+<!-- sidebar -->
+<?= $this->include('layout/template_topsidebar_main'); ?>
 <div class="container">
     <?php foreach ($databuku as $buku) : ?>
         <div class="card">

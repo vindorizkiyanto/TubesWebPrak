@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.detail{
+    position: absolute;
+  margin-left: 500px;
+    margin-top:150px ;
+    width: 60%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "cover content";
+    box-shadow:-2px 0px 33px 0px rgba(0,0,0,0.75);
+    background-color: #22242A;
+}
+.detail,.cover,.content{
+    width: 60%;
+    height: 70%;
+}
+.cover{
+    grid-area: cover;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto ;
+    height:500px;
+    width: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+.content{
+    margin-top: 50px;
+    padding-right: 200px ;
+    grid-area: content;
+    background:#d3fbff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+.nav{
+    font-size: 40px;
+    margin: 10px 20px;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: gray;
+}
+.content-body{
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.pages{
+    width: 20%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: gray;
+    position: relative;
+    transform: translateY(38px);
+}
+.pages span{
+    margin-top: 15px;
+}
+.black-label{
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 100%;
+}
+.black-label span{
+    margin-bottom: 20px;
+
+}
+.black-label p{
+    margin-top: 10px;
+    font-size: 13px;
+    padding-right: 1000px;
+    color: gray;
+    width: 130%;
+    margin-bottom: 30px;
+}
+.title{
+    font-size: 24px;
+}
+.prix{
+    margin: 50  px 0px;
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-left: 4px solid rgb(255,177,33);
+}
+.prix span{
+    padding-left: 10px;
+    padding-right: 40px;
+}
+.crt{
+    color: gray;
+    left: 20px;
+    padding-right: 50px;
+    border-bottom: px solid rgb(177,177,177);
+}
+.active{
+    color: black;
+    position: relative;
+    transform: translateX(60px);
+}
+.active::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 67px;
+    right: 117%;
+    top: 45%;
+    background-color: #555;
+    height: .2em;
+    min-height: 1px;
+    z-index: 1;
+}

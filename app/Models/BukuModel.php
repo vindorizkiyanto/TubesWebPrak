@@ -8,7 +8,7 @@ class BukuModel extends Model
 {
     protected $table = 'buku';
     protected $useTimestamps = true;
-    protected $allowedFields = ['kode_buku', 'judul', 'penulis', 'sampul', 'deskripsi'];
+    protected $allowedFields = ['kode_buku', 'judul', 'penulis', 'sampul', 'deskripsi', 'stok'];
 
     public function getBuku($kode_buku = false)
     {

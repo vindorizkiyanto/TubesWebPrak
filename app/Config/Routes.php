@@ -34,7 +34,15 @@ $routes->setAutoRoute(true);
 $routes->get('/login', 'Auth::login');
 $routes->get('/register', 'Auth::register');
 $routes->get('/', 'Main');
-
+$routes->get('/admin', 'Main::admin');
+$routes->get('/admin/peminjamanbuku', 'Main::adminpeminjamanbuku');
+$routes->get('/admin/verifikasipeminjaman', 'Main::adminverifikasipeminjaman');
+$routes->get('/admin/verifikasipengembalian', 'Main::adminverifikasipengembalian');
+$routes->get('/admin/tambahdata', 'Main::halamantambahdata');
+$routes->delete('/admin/buku/delete/(:num)', 'Buku::delete/$1');
+$routes->get('/admin/buku/delete/(:any)', 'Buku::error');
+$routes->get('/admin/editdata/(:any)', 'Main::halamaneditdata/$1');
+$routes->get('/listbukudipinjam/(:num)', 'Main::listbukudipinjam/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

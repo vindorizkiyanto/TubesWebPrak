@@ -1,130 +1,148 @@
 body{
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto",sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto",sans-serif;
 }
 
 header{
-    position: fixed;
-    background: #22242A;
-    padding: 20px;
-    width: 100%;
-    height: 30px;
+  position: fixed;
+  background: #22242A;
+  padding: 20px;
+  width: 100%;
+  height: 30px;
 }
 .left_area h3{
-    color: #ffffff;
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
 }
 
 .left_area span{
-    color: #009999;
+  color: #009999;
 }
 .logout_btn{
-    padding:    5px;
-    background: #009999;
-    text-decoration: none;
-    float: right;
-    margin-top: -30px;
-    margin-right: 40px;
-    border-radius: 2px;
-    font-size: 15;
-    font-weight: 600;
-    color: #ffffff;
+  padding:    5px;
+  background: #009999;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .logout_btn:hover{
-    background: #0D9DBB;
+  background: #0D9DBB;
+}
+.dropdown {
+  position: relative;
+ 
+  display: inline-block;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #202020;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 45px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .sidebar{
-    background: #2F323A;
-    margin-top: 70px;
-    padding-top: 30px;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    transition: 0.5s;
-    transition-property: left;
+  background: #2F323A;
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
 }
 .sidebar .profile_images{
-    width:100px;
-    height:100px;
-    border-radius: 100px;
-    margin-bottom: 10px;
+  width:100px;
+  height:100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
 }
 .sidebar h4{
-    color:#cccc;
-    margin-top: 0;
-    margin-bottom: 20px;
+  color:#cccc;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .sidebar a{
-    color: #ffffff;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    padding-left: 40px;
-    box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 
 .sidebar a:hover{
-    background: #19b3d3;
+  background: #19b3d3;
 }
 
 .sidebar i{
-    padding-right: 10px;
+  padding-right: 10px;
 }
 label #sidebar_btn{
-    z-index: 1;
-    color: #ffffff;
-    position: fixed;
-    cursor: pointer;
-    left: 300px;
-    font-size: 20px;
-    margin: 5px 0;
-    transition:0.5s ;
-    transition-property: color;
+  z-index: 1;
+  color: #ffffff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition:0.5s ;
+  transition-property: color;
 }
 
 label #sidebar_btn:hover{
-    color: #19b3d3;
+  color: #19b3d3;
 
 }
 
 #check:checked ~ .sidebar{
-    left:-190px;
+  left:-190px;
 }
 
 #check:checked ~ .sidebar a span{
-    display: none;
+  display: none;
 }
 
 #check:checked ~ .sidebar a{
-    font-size: 20px;
-    margin-left: 170px;
-    width: 80px;
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
 }
 
 .content{
-    margin-left: 20px;
-    background:url('/img/backgroundauth.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    transition: 0.5s;
+  margin-left: 20px;
+  background:url('/img/backgroundauth.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
 
 }
 
 #check:checked ~ .content{
-    margin-left: 58px;
+  margin-left: 58px;
 }
 
 #check{
-    display: none;
+  display: none;
 }
 

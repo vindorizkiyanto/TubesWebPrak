@@ -26,7 +26,10 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
-
+.judul{
+  position: absolute;
+  margin-top: 200px;
+}
 h1, p {
   margin: 0;
 }
@@ -131,12 +134,12 @@ img {
 }
 
 .card:hover .card__title {
-  transform: translateX(-2.3rem);
+  transform: translateX(-2rem);
   margin-bottom: 0;
 }
 
 .card:hover .card__preci {
-  transform: translateX(-6.8rem);
+  transform: translateX(-2rem);
 }
 
 .card:hover .card__description, 
